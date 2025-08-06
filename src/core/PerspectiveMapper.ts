@@ -1,16 +1,31 @@
-/*
- * PerspectiveMapper.ts
- * Converts a ToneVector (ΔT, ΔS, ΔR) into an IntegrityVector
- * based on the TRSC (Tone Responsibility Semantic Conversion) principle.
+/**
+ * @module PerspectiveMapper
+ * @location /src/core
+ * @version 1.0
+ *
+ * @description
+ * A core ToneSoul component that converts a ToneVector (ΔT, ΔS, ΔR) into an IntegrityVector.
+ * This supports the TRSC principle (Tone Responsibility Semantic Conversion),
+ * enabling semantic disentanglement between tone behavior and moral interpretation.
+ *
+ * [System Role]
+ * - Serves as the central mapping layer between tone analytics and vow-based ethical logic.
+ * - Allows vow rules to be defined in the ethical (Integrity) space, not the behavioral (Tone) space.
+ *
+ * [Vector Duality Note]
+ * - ToneVector = observable linguistic behavior
+ * - IntegrityVector = interpreted responsibility profile
  */
 
-import { ToneVector, ToneSemanticType } from "./toneVector";
+import { ToneVector, ToneSemanticType } from "./toneVector"
 
 export interface IntegrityVector {
   /** Truthfulness: How sincere or direct the tone is in conveying factual responsibility */
   truthfulness: number;
+
   /** Sincerity: Alignment between emotional tone and pragmatic intent */
   sincerity: number;
+
   /** Responsibility: Degree to which the speaker assumes moral/logical responsibility */
   responsibility: number;
 }
@@ -22,14 +37,14 @@ export interface IntegrityVector {
 export function mapToneToIntegrityVec(tv: ToneVector): IntegrityVector {
   return {
     // Truthfulness: Highest when tone is neither too passive nor too aggressive
-    truthfulness: 1.0 - Math.abs(tv.ΔT - 0.5) * 2, // normalized dip around extremes
+    truthfulness: 1.0 - Math.abs(tv.ΔT - 0.5) * 2,
 
     // Sincerity: Depends on the direction type
     sincerity: estimateSincerity(tv.ΔS),
 
     // Responsibility: Directly using ΔR
     responsibility: tv.ΔR
-  };
+  }
 }
 
 /**
