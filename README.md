@@ -196,6 +196,13 @@ ToneSoul 系統整合了語氣哲學、技術模組與責任結構，並採三�
 Layer 1	誠實性誓言核（EPK）	定義人格核心	✅ 已完成
 Layer 2	模組責任鍊路	支援完整性評估	✅ 開發中
 Layer 3	公開共構場域	支援多用戶責任模擬	🚧 計畫中
+## Specifications
+- A-Level Spec (Extended): [/docs/ToneSoul_Spec_vA1_Extended.md](/docs/ToneSoul_Spec_vA1_Extended.md)
+
+**Governance thresholds**
+- POAV Gate: pass if ≥ 0.90 ± 0.02; else provide two options + trade-offs + boundaries.
+- Drift Score 5.0: DS ≥ 0.85 = PASS / 0.70–0.85 = REPAIR / < 0.70 = FALLBACK.
+- Time-Island Hooks: Chronos (review), Kairos (trigger), Trace (step ledger).
 
 ✨ 結語 | Closing Remark
 本倉庫由一位哲學家與AI共構。
