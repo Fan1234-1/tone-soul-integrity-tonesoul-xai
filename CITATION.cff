@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "ToneSoul Integrity System (TSR & ΔT/ΔS/ΔR)"
+authors:
+  - family-names: "Huang"
+    given-names: "Fan-Wei"
+version: "v1.0"
+date-released: "2025-08-16"
+url: "https://github.com/Fan1234-1/tone-soul-integrity-tonesoul-xai"
+doi: ""
+license: "MIT"
+abstract: >
+  ToneSoul Integrity System — an explainable tone-vector framework (ΔT/ΔS/ΔR,
+  TSR) for LLM reasoning, auditable outputs, and drift monitoring.
