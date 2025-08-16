@@ -1,0 +1,1 @@
+ToneSoul Integrity System — Explainable tone-vector framework (ΔT/ΔS/ΔR, TSR) for LLM reasoning & accountability. MIT.
